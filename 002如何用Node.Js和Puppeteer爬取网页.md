@@ -4,7 +4,7 @@
 
 **作者**：[Francesco Napoletano](https://medium.com/@napolux) **发表时间**：2018/8/17
 
-**译者**：[陈 昌茂](https://juejin.im/user/59aabc9af265da249517aa6d) **发表时间：**2018/8/20
+**译者**：[陈 昌茂](https://juejin.im/user/59aabc9af265da249517aa6d) **发表时间**：2018/8/20
 
 (**转载请注明出处**)
 
@@ -23,7 +23,7 @@
 
 `Puppeteer` 是一个 `Node` 代码库，基于 `DevTools` 协议，提供高级 API 自动化控制谷歌`Chrome` 或 `Chromium`浏览器。`Puppeteer` 默认以无界面方式运行，但也可以设置为有界面方式运行谷歌`Chrome` 或 `Chromium`浏览器。
 
-**这意味着什么？**你可以在你的服务中运用一个谷歌`Chrome` 浏览器实例。是不是很酷～
+**这意味着什么？** 你可以在你的服务中运用一个谷歌`Chrome` 浏览器实例。是不是很酷～
 
 下面我们一起来看下如何做。
 
