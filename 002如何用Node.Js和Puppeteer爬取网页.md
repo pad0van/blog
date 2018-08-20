@@ -2,7 +2,7 @@
 
 **原文**：[How To Scrap That Web Page With Node.Js And Puppeteer](https://coding.napolux.com/how-to-scrap-web-page-nodejs-puppeteer/)
 
-**作者**：[Francesco Napoletano](https://medium.com/@napolux?source=post_header_lockup) **发表时间**：2018/8/17
+**作者**：[Francesco Napoletano](https://medium.com/@napolux) **发表时间**：2018/8/17
 
 **译者**：[陈 昌茂](https://juejin.im/user/59aabc9af265da249517aa6d) **发表时间：**2018/8/20
 
@@ -29,7 +29,7 @@
 
 ### 设置运行环境
 
-照例是打开终端，建立项目文件夹，在刚创建的文件夹运行命令  `npm init`。
+照例是打开终端，建立项目文件夹，在刚创建的文件夹运行命令 `npm init`。
 
 命令执行后，文件夹中生成一个 `package.json` 的文件。执行命令 `npm i -S puppeteer` 安装 `Puppeteer`. 
 
@@ -45,7 +45,7 @@
 
 ### 直接上代码，知其然
 
-把下述代码复制保存到项目文件夹的 `index.js` 文件中。
+在项目文件夹新建 `index.js` 文件，复制下述代码并粘贴到 `index.js` 文件中。
 
 ```javascript
 const puppeteer = require('puppeteer');
@@ -71,22 +71,22 @@ puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sand
                     'url'   : url
                 });
             });
-            return data; // Return our data array
+            return data; // 返回数组
         } catch(err) {
             reject(err.toString());
         }
     });
 
-    // let's close the browser
+    // 关闭浏览器
     await browser.close();
 
-    // ok, let's log blog titles...
+    // 记录播客标题
     for(var i = 0; i < result.length; i++) {
-        console.log('Post: ' + result[i].title + ' URL: ' + result[i].url);
+        console.log('标题: ' + result[i].title + ' 链接: ' + result[i].url);
     }
     process.exit();
 }).catch(function(error) {
-    console.error('No way Paco!');
+    console.error('无能为力，爬取失败！');
     process.exit();
 });
 ```
