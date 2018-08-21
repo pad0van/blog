@@ -1,12 +1,13 @@
 # 如何用 `Node.Js` 和 `Puppeteer` 爬取网页
 
-**原文**：[How To Scrap That Web Page With Node.Js And Puppeteer](https://coding.napolux.com/how-to-scrap-web-page-nodejs-puppeteer/)
+原文：[How To Scrap That Web Page With Node.Js And Puppeteer](https://coding.napolux.com/how-to-scrap-web-page-nodejs-puppeteer/)
 
-**作者**：[Francesco Napoletano](https://medium.com/@napolux) **发表时间**：2018/8/17
+作者：[Francesco Napoletano](https://medium.com/@napolux) 发表时间：2018/8/17
 
-**译者**：[陈 昌茂](https://juejin.im/user/59aabc9af265da249517aa6d) **发表时间**：2018/8/20
+译者：[陈 昌茂](https://juejin.im/user/59aabc9af265da249517aa6d) 发表时间：2018/8/20
 
-(**转载请注明出处**)
+(转载请注明出处)
+
 
 
 
@@ -18,7 +19,6 @@
 
 - Node.js（ 译者注：采用谷歌V8引擎开发的在服务器端运行JavaScript代码的跨平台运行环境 ）
 - Puppeteer（ 译者注：木偶人，是谷歌浏览器的一个子项目，源代码托管在 [GitHub](https://github.com/GoogleChrome/puppeteer) ）
-- A little Raspberry Pi where my scripts can run all day long.
 - 用于全天侯跑脚本的一个黑莓派（译者注：貌似和正文无关）
 
 `Puppeteer` 是一个 `Node` 代码库，基于 `DevTools` 协议，提供高级 API 自动化控制谷歌`Chrome` 或 `Chromium`浏览器。`Puppeteer` 默认以无界面方式运行，但也可以设置为有界面方式运行谷歌`Chrome` 或 `Chromium`浏览器。
@@ -31,7 +31,7 @@
 
 照例是打开终端，建立项目文件夹，在刚创建的文件夹运行命令 `npm init`。
 
-命令执行后，文件夹中生成一个 `package.json` 的文件。执行命令 `npm i -S puppeteer` 安装 `Puppeteer`. 
+命令执行后，文件夹中生成一个 `package.json` 的文件。执行命令 `npm i -S puppeteer` 安装 `Puppeteer`.
 
 > 小小的警告：安装 `Puppeteer` 过程中会下载完整版的谷歌`Chromium`浏览器到 `node_modules` 目录。
 
@@ -82,11 +82,11 @@ puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sand
 
     // 记录播客标题
     for(var i = 0; i < result.length; i++) {
-        console.log('标题: ' + result[i].title + ' 链接: ' + result[i].url);
+        console.log('Post: ' + result[i].title + ' URL: ' + result[i].url);
     }
     process.exit();
 }).catch(function(error) {
-    console.error('无能为力，爬取失败！');
+    console.error('No way Paco!');
     process.exit();
 });
 ```
@@ -110,10 +110,23 @@ puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sand
 
 在项目文件夹执行命令 `node index.js` ，你将看到如下内容输出：
 
-```bash
+```
 Post: Blah blah 1? URL: https://coding.napolux.com/blah1/
 Post: Blah blah 2? URL: https://coding.napolux.com/blah2/
 Post: Blah blah 3? URL: https://coding.napolux.com/blah3/
+```
+
+（执行命令  `node index.js` ，译者看到如下内容输出）
+
+```
+Post: How to scrap that web page with Node.js and puppeteer URL: https://coding.napolux.com/how-to-scrap-web-page-nodejs-puppeteer/
+Post: How to find ideas for beer money? URL: https://coding.napolux.com/how-to-find-ideas-for-beer-money/
+Post: This is the kind of automation I like! URL: https://coding.napolux.com/this-is-the-kind-of-automation-i-like/
+Post: Some tips from when you work from home URL: https://coding.napolux.com/some-tips-from-when-you-work-from-home/
+Post: How to find a cofounder for your startup URL: https://coding.napolux.com/how-to-find-a-cofounder-for-your-startup/
+Post: Software Industry VS anything else URL: https://coding.napolux.com/software-industry-vs-anything-else/
+Post: Some of my GitHub repositories URL: https://coding.napolux.com/some-of-my-github-repositories/
+Post: How to use Docker for easy and fast WordPress development URL: https://coding.napolux.com/how-to-use-docker-for-wordpress-development/
 ```
 
 ### 文章摘要说明
@@ -122,4 +135,4 @@ Post: Blah blah 3? URL: https://coding.napolux.com/blah3/
 
 可以爬取你的网站吗？作为[网站](https://coding.napolux.com)的主人，**我没有授权你这么做**。
 
-给你留个作业吧：如何爬取使用了 `AJAX` 的网页！😉
+给你留个作业练手：如何爬取使用了 `AJAX` 的网页！😉
