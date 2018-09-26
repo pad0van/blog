@@ -12,6 +12,7 @@
 ## 原创
 
 - [100一个专业Fake的Python库](./100一个专业Fake的Python库.md)
+- [101记升级 macOS Mojave 过程中的一件小事](./101记升级 macOS Mojave 过程中的一件小事.md)  *2018.9.26*
 
 
 
