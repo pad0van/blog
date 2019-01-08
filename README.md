@@ -2,17 +2,18 @@
 
 ## 译文
 
-- [001 如何删除本地和远程GIT分支](./001如何删除本地和远程GIT分支.md)
-- [002 如何用Node.Js和Puppeteer爬取网页](./002如何用Node.Js和Puppeteer爬取网页.md)
-- [003 Web安全快速入门](./003Web安全快速入门.md)
-- [004 004如何保持GitHub的Fork项目同步](./004如何保持GitHub的Fork项目同步.md)
+- [001 如何删除本地和远程GIT分支](./001支.md)
+- [002 如何用Node.Js和Puppeteer爬取网页](./002.md)
+- [003 Web安全快速入门](./003.md)
+- [004 004如何保持GitHub的Fork项目同步](./004.md)
 
 
 
 ## 原创
 
-- [100一个专业Fake的Python库](./100一个专业Fake的Python库.md)
-- [101记升级 macOS Mojave 过程中的一件小事](./101记升级 macOS Mojave 过程中的一件小事.md)  *2018.9.26*
+- [100 一个专业Fake的Python库](./100.md)
+- [101 记升级 macOS Mojave 过程中的一件小事](./101.md)  *2018.9.26*
+- [102 Jupyter 笔记本文件版本控制问题及解决方案](./102.md) *2018.10.21*
 
 
 
